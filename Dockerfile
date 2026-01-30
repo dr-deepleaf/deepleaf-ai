@@ -7,12 +7,7 @@ WORKDIR /app
 # 필요한 파일들 복사
 COPY requirements.txt .
 COPY test.py .
-COPY ./model/fifth_trained_model.keras .
-COPY ./model/corn_trained_model.keras .
-COPY ./model/grape_trained_model.keras .
-COPY ./model/orange_watermelon_trained_model.keras .
-COPY ./model/tomato_trained_model.keras .
-
+COPY ./model/ ./model/
 # 필요한 패키지 설치
 RUN pip install --no-cache-dir -r requirements.txt
 
